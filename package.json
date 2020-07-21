@@ -1,0 +1,20 @@
+{
+  "name": "trusstor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Daniel Maistern",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start-client": "cd client && yarn start",
+    "start-server": "cd server && yarn start",
+    "install-client": "cd client && yarn install && cd ..",
+    "install-server": "cd server && yarn install && cd ..",
+    "install-all": "yarn install && yarn install-server && yarn install-client",
+    "start": "concurrently \"yarn start-server\" \"yarn start-client\"",
+    "install-and-start": "yarn install-all && yarn start"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
